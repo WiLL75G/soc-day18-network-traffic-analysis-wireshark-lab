@@ -1,3 +1,4 @@
+
 # Day 18 – SOC Tier 1 Incident Report: Network Traffic Analysis, Wireshark Lab.
 
 ---
@@ -38,9 +39,9 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 1. PCAP Loaded Initial Overview
 
-![Wireshark PCAP Loaded](./screenshots/04_wireshark_pcap_loaded.png)
+![Wireshark PCAP Loaded](./screenshots/04_pcap_loaded_overview.png)
 
-- Loaded PCAP file `2026-02-28-traffic-analysis-exercise.pcap.zip` into Wireshark into Wireshark
+- Loaded PCAP file `2026-02-28-traffic-analysis-exercise.pcap.zip` into Wireshark
 - Total packets: 15,512 across the capture window
 - Identified mix of DHCP, ARP, DNS, HTTP, and TCP traffic
 - Noted initial DHCP discover and request from an unassigned host
@@ -73,7 +74,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 3. Packet Detail Analysis TCP SYN to C2
 
-![HTTP POST Details](./screenshots/06_http_post_details.png)
+![HTTP POST Details](./screenshots/06_tcp_syn_http_post_details.png)
 
 - Examined packet 2569 — TCP SYN from `10.2.28.88` to `45.131.214.85:443`
 - Source MAC confirmed: `00:19:d1:b2:4d:ad` (Intel NIC)
@@ -90,9 +91,9 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 4. DHCP Analysis Host Identification
 
-![DHCP Packets](./screenshots/07_dhcp_packets.png)
+![DHCP Packets](./screenshots/07_dhcp_packets_analysis.png)
 
-![Hostname Discovered](./screenshots/08_hostname_discovered.png)
+![Hostname Discovered](./screenshots/08_hostname_mac_discovered.png)
 
 - Applied display filter `dhcp` 4 DHCP packets displayed
 - Expanded DHCP Discover packet Option (12) Host Name revealed
@@ -111,7 +112,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 5. DNS Traffic Analysis
 
-![DNS Traffic](./screenshots/09_dns_traffic.png)
+![DNS Traffic](./screenshots/09_dns_traffic_analysis.png)
 
 - Applied display filter `dns`
 - Reviewed all DNS queries made by the infected host
@@ -128,7 +129,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ### 6. Network Conversation Statistics
 
-![TCP Conversations](./screenshots/10_network_conversations.png)
+![TCP Conversations](./screenshots/10_tcp_conversations.png)
 
 ![IPv4 Conversations](./screenshots/11_ipv4_conversations.png)
 
@@ -217,20 +218,20 @@ Network traffic analysis is one of the most powerful skills in the SOC analyst t
 
 ## Repository Structure
 
-```
+```text
 network-traffic-analysis-wireshark-lab/
 ├── README.md
 └── screenshots/
     ├── 01_wireshark_version.png
-    ├── 02_malware_traffic_site.png
-    ├── 03_exercise_background(1).png
-    ├── 04_wireshark_pcap_loaded.png
+    ├── 02_malware_traffic_analysis_site.png
+    ├── 03_exercise_background.png
+    ├── 04_pcap_loaded_overview.png
     ├── 05_c2_traffic_filtered.png
-    ├── 06_http_post_details.png
-    ├── 07_dhcp_packets.png
-    ├── 08_hostname_discovered.png
-    ├── 09_dns_traffic.png
-    ├── 10_network_conversations.png
+    ├── 06_tcp_syn_http_post_details.png
+    ├── 07_dhcp_packets_analysis.png
+    ├── 08_hostname_mac_discovered.png
+    ├── 09_dns_traffic_analysis.png
+    ├── 10_tcp_conversations.png
     └── 11_ipv4_conversations.png
 ```
 
