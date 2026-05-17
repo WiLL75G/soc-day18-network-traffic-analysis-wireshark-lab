@@ -40,7 +40,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ![Wireshark PCAP Loaded](./screenshots/04_wireshark_pcap_loaded.png)
 
-- Loaded PCAP file `2026-02-28-traffic-analysis-exercise.pcap` into Wireshark
+- Loaded PCAP file `2026-02-28-traffic-analysis-exercise.pcap.zip` into Wireshark into Wireshark
 - Total packets: 15,512 across the capture window
 - Identified mix of DHCP, ARP, DNS, HTTP, and TCP traffic
 - Noted initial DHCP discover and request from an unassigned host
@@ -223,7 +223,7 @@ network-traffic-analysis-wireshark-lab/
 └── screenshots/
     ├── 01_wireshark_version.png
     ├── 02_malware_traffic_site.png
-    ├── 03_exercise_background.png
+    ├── 03_exercise_background(1).png
     ├── 04_wireshark_pcap_loaded.png
     ├── 05_c2_traffic_filtered.png
     ├── 06_http_post_details.png
