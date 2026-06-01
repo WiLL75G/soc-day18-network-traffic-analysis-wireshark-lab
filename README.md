@@ -1,5 +1,4 @@
-
-# Day 18 – SOC Tier 1 Incident Report: Network Traffic Analysis, Wireshark Lab.
+# Network Traffic Analysis: Identifying Malicious Activity in Packet Captures (Wireshark)
 
 ---
 
