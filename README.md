@@ -75,7 +75,7 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 ![HTTP POST Details](./screenshots/06_tcp_syn_http_post_details.png)
 
-- Examined packet 2569 — TCP SYN from `10.2.28.88` to `45.131.214.85:443`
+- Examined packet 2569 TCP SYN from `10.2.28.88` to `45.131.214.85:443`
 - Source MAC confirmed: `00:19:d1:b2:4d:ad` (Intel NIC)
 - Connection initiated from infected host not inbound
 - Confirmed infected host is the aggressor initiating C2 contact
@@ -150,14 +150,14 @@ A SIEM alert flagged signature hits for NetSupport Manager RAT communicating wit
 
 | Type | Value | Verdict |
 |---|---|---|
-| Infected Host IP | 10.2.28.88 | ❌ Compromised — NetSupport RAT |
-| Infected Hostname | brads-MBP | ❌ Compromised — Isolate immediately |
+| Infected Host IP | 10.2.28.88 | ❌ Compromised NetSupport RAT |
+| Infected Hostname | brads-MBP | ❌ Compromised Isolate immediately |
 | Infected MAC | 00:19:d1:b2:4d:ad | ❌ Compromised device |
-| C2 IP | 45.131.214.85 | ❌ Malicious — RAT C2 server |
+| C2 IP | 45.131.214.85 | ❌ Malicious RAT C2 server |
 | C2 URI | /fakeurl.htm | ❌ NetSupport RAT callback URI |
-| C2 Port | TCP 443 | ⚠️ Evasion — HTTP over HTTPS port |
-| Secondary IP | 4.149.160.182 | ⚠️ Investigate — external connection |
-| Malware | NetSupport Manager RAT | ❌ Confirmed — RAT active |
+| C2 Port | TCP 443 | ⚠️ Evasion HTTP over HTTPS port |
+| Secondary IP | 4.149.160.182 | ⚠️ Investigate external connection |
+| Malware | NetSupport Manager RAT | ❌ Confirmed RAT active |
 
 ---
 
